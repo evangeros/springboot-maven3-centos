@@ -9,10 +9,16 @@ import org.springframework.web.bind.annotation.*;
 @EnableAutoConfiguration
 public class App {
 
+    @Value("${cloud.source}")
+    private String cloudSource;
+
+    @Value("${cloud.greeting}")
+    private String cloudGreeting;
+
     @RequestMapping("/")
     @ResponseBody
     String home() {
-        return "Hello World!";
+        return cloudGreeting + cloudSource;
     }
 
     public static void main(String[] args) throws Exception {
