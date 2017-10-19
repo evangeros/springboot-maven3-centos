@@ -6,7 +6,8 @@
 # IMAGE_NAME specifies a name of the candidate image used for testing.
 # The image has to be available before this script is executed.
 #
-IMAGE_NAME=${IMAGE_NAME-codecentric/springboot-maven3-centos-candidate}
+#IMAGE_NAME=${IMAGE_NAME-codecentric/springboot-maven3-centos-candidate}
+IMAGE_NAME=${IMAGE_NAME-evangeros/springboot-mvn3centos-candidate}
 
 if [ $# -eq 0 ]; then
   echo "ERROR: No test project name has been passed."
